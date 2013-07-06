@@ -1,4 +1,4 @@
-ActiveAdmin.register Page do
+ActiveAdmin.register Page, as: 'StaticPage' do
 
 controller do
   def permitted_params
