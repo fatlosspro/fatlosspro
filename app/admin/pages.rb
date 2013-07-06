@@ -2,7 +2,7 @@ ActiveAdmin.register Page, as: 'StaticPage' do
 
 controller do
   def permitted_params
-    params.permit(:page => [:name, :title, :body, :visible])
+    params.permit(:static_page => [:name, :title, :body, :visible])
   end
 end
 
