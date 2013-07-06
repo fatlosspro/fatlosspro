@@ -1,0 +1,26 @@
+// Place all the styles related to the Users controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.control-block {
+  margin-left: 368px;
+}
+
+.controls {
+  display: inline-block;
+  text-align: center;
+}
+
+.msg {
+  display: inline;
+  padding-left: 10px;
+  font-weight: 400
+}
+
+#submit {
+  padding: 10px 0 0 76px;
+}
+
+#std-submit {
+  padding-top: 10px;
+}

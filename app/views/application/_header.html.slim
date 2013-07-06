@@ -1,0 +1,29 @@
+header
+  
+  h2#logo
+    = image_tag "logo.png", class: 'inline' 
+    = link_to "FatLoss Pro", "/"
+
+  ul.nav
+
+    - if user_signed_in?
+      li.left 
+        = link_to "Dashboard", user_root_path, class: "link"
+        = link_to destroy_user_session_path, :method => :delete, class: "link" do
+          i.icon-signout
+    - else
+      li.left 
+        = link_to user_session_path, class: "link" do
+          | Sign in
+          i.icon-signin
+
+    - @pages.each do |page|  
+      li.left = link_to page.title, "/#{page.name}", class: 'link'
+    
+
+    li.right = link_to "#", class: 'link' do
+      i.icon-facebook-sign.icon-large
+    li.right = link_to "#", class: 'link' do
+      i.icon-twitter-sign.icon-large
+    li.right = link_to "#", class: 'link' do
+      i.icon-youtube.icon-large

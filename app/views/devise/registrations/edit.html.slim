@@ -1,0 +1,39 @@
+= title 'User settings'
+h2.head.light Settings
+hr
+div.dash-nav.center 
+  = link_to "Notes", user_notes_path, class: "link"
+  |  -  
+  = link_to "Dashboard Home", user_root_path, class: "link"
+  |  -  
+  = link_to "Settings", edit_user_registration_path, class: "link" 
+hr
+
+
+
+div.center
+  = form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :method => :put }) do |f|
+    = error_messages!
+    div
+      = f.label :email
+      br/
+      = f.email_field :email, :autofocus => true
+    - if devise_mapping.confirmable? && resource.pending_reconfirmation?
+      div
+        | Currently waiting confirmation for: #{resource.unconfirmed_email}
+    - if current_user.provider.blank?
+      div
+        = f.label :password
+        i 
+        |  (leave blank if you don't want to change it)
+        br/
+        = f.password_field :password, :autocomplete => "off"
+      div
+        = f.label :password_confirmation
+        br/
+        = f.password_field :password_confirmation
+    div
+      = f.label :Bio
+      br/
+      = f.text_area :bio
+    div#std-submit= f.submit "Update"

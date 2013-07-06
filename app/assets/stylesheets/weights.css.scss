@@ -1,0 +1,29 @@
+// Place all the styles related to the weights controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+#weight-form {
+  float: right;
+  & > form > div {
+    padding-top: 15px;
+    & > label {
+      padding-right: 10px;
+    }
+    & > small {
+      float: right;
+      margin: 5px 0 0 20px
+    }
+  }
+} 
+
+.short-input {
+  width: 50px
+}
+
+.gallery {
+  margin-top: 30px;
+}
+
+.photo-1 {
+  margin: 0 35px;
+}

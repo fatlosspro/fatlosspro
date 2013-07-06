@@ -1,0 +1,41 @@
+= title 'Weight tracker'
+h2.head.light Weight Tracker
+hr
+div.dash-nav.center 
+  = link_to "Notes", user_notes_path, class: "link"
+  |  -  
+  = link_to "Dashboard Home", user_root_path, class: "link"
+  |  -  
+  = link_to "Settings", edit_user_registration_path, class: "link" 
+hr
+
+div#labels.hidden = "#{chart_data(:labels,8) || '["January","February","March","April","May","June"]'}" 
+div#points.hidden = "#{chart_data(:points,8) || '[236,220,198,194,187,178]'}"
+canvas.weight-chart.left#large-tracker width="500" height="200"
+
+div#weight-form
+  h2.light Add new entry
+  - if current_user.weights.length < 2
+    div
+      small Chart will be rendered when you add 2 or more records
+  = form_for @weight, multipart: true do |f|
+    div
+      = f.label :Weight
+      = f.text_field :value, class: "short-input"
+      | &nbsp;lbs
+    div
+      = f.label :Photo
+      | &nbsp;
+      = f.file_field :photo  
+    div
+      = f.submit :Add
+      small You can leave one field empty
+
+div.clearfix
+div.gallery.center
+  - @weights.each_slice(3) do |slice|
+    div.row
+      - slice.each_with_index do |entry, i|
+        - if entry.photo_file_name.present?
+          = link_to entry.photo(:large), class: "f-gallery", rel: "gl" do
+            = image_tag entry.photo(:thumb), class: "photo-#{i}", alt: entry.value

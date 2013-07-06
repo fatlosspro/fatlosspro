@@ -1,0 +1,80 @@
+// Place all the styles related to the Articles controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+html {
+  overflow-y: scroll; // Force vertical scrollbar to prevent jump after landing page slides down
+}
+
+@keyframes blink {
+  0%   { color: #eee; }
+  25%  { color: #000; }
+  50%  { color: #eee; }
+  100% { color: #000; }
+}
+
+@-webkit-keyframes blink {
+  0%   { color: #eee; }
+  25%  { color: #999; }
+  50%  { color: #eee; }
+  100% { color: #999; }
+}
+
+#landing {
+  background: image-url("landing.png");
+  background-size: cover;
+  color: #bbb;
+  height: 100%;
+  & h1 {
+    font-size: 50px; 
+    font-weight: 200;
+  }
+
+}
+
+.title {
+  padding: 50px 0 0 80px;
+}
+
+.subtitle {
+  font-weight: 200;
+  padding: 0 0 0 80px;
+}
+
+#scroll-stack {
+  width: 56px;
+  color: #eee;
+  margin: auto;
+  padding-top: 25%;
+  animation: blink 2s linear 1s infinite;
+  -webkit-animation: blink 2s linear 1s infinite;
+  i {
+    padding-left: 5px; 
+    display: block;
+    &.top {
+      padding-left: 10px;
+      margin-bottom:-30px;
+    }
+  }
+}
+
+.article {
+  padding: 0 0 30px 0;
+}
+
+.body {
+  margin-top: 10px;
+}
+
+.timestamp {
+  font-size: 14px;
+  text-align: right;
+  padding-right: 40px;
+}
+
+.split {
+  width: 700px;
+  position: relative;
+  left: 130px;
+}

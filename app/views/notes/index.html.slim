@@ -1,0 +1,42 @@
+= title 'Personal notes'
+i#note-toggle.icon-pencil.icon-2x.right.nav-ico
+h2.head.light Notes
+hr
+div.dash-nav.center 
+  = link_to "Notes", user_notes_path, class: "link"
+  |  -  
+  = link_to "Dashboard Home", user_root_path, class: "link"
+  |  -  
+  = link_to "Settings", edit_user_registration_path, class: "link" 
+hr
+
+div#note-form.center
+  = form_for @note do |f|
+    div
+      = f.label :Title
+      br/
+      = f.text_field :title
+    
+    div
+      = f.label :Text
+      br/
+      = f.text_area :body
+
+    div#std-submit
+      = f.submit :Create!
+  hr
+
+- if @notes.empty?
+  h2.light.center Feel free to keep your personal notes here
+  h3.light.center Press the pencil icon to add one
+- else
+  - @notes.each do |note|
+    div.note
+      h2.head = note.title
+      p.body = note.body
+      p.timestamp 
+        = note.created_at.strftime("%m.%d.%Y")
+        = link_to note_path(note), confirm: 'Are you sure', method: :delete, class: 'link' do
+          i.icon-trash.link-ico
+  /div.pagination.center
+  = will_paginate @notes, class: 'pagination center'

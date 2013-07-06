@@ -1,0 +1,6 @@
+= title @article.title
+div.article
+  h2.head = @article.title
+  p.body == @article.body.sub('<p>[cut]</p>','')
+  p.left = link_to "Back", articles_path, class: 'link'
+  p.timestamp = @article.created_at.strftime("%m.%d.%Y")

@@ -1,0 +1,27 @@
+= title 'Home'
+- if cookies[:landing].nil?
+  div#landing
+    h1.next.title 
+      | FatLoss
+      span.orange Pro
+    h3.subtitle
+      span.orange Best 
+      | way to shape your body. Brought 
+      span.orange to you 
+      | by best fitness teacher. Ever.
+    div#scroll-stack
+      i.icon-angle-down.icon-3x.top
+      i.icon-angle-down.icon-4x
+
+div#particles.content data-stellar-background-ratio="0.65"
+  div#blur.content data-stellar-background-ratio="0.8" 
+    div.content-area
+      = render 'flashes'
+      - @articles.each do |article|
+        div.article
+          h2.head = article.title
+          p.body == article.body.split("[cut]")[0]
+          p.left = link_to "Continue reading", article_path(article.id), class: 'link'
+          p.timestamp = article.created_at.strftime("%m.%d.%Y")
+
+        = will_paginate @notes, class: 'pagination center'

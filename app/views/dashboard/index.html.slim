@@ -1,0 +1,57 @@
+= title 'Personal Dashboard'
+h2.head.light Dashboard
+hr
+div.dash-nav.center 
+  = link_to "Notes", user_notes_path, class: "link"
+  |  -  
+  = link_to "Dashboard Home", user_root_path, class: "link"
+  |  -  
+  = link_to "Settings", edit_user_registration_path, class: "link" 
+hr
+
+div#form.center
+  h2.light Update your profile photo
+  = form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :multipart => true, :method => :put }) do |f|
+    /= error_messages!
+    div
+      = f.file_field :avatar
+      = f.hidden_field :cropped, value: false
+    div
+      = f.submit :Upload
+      br/
+      small you will be able to crop it afterwards
+
+- if (current_user.avatar_file_name.present?) && (not current_user.cropped)
+  
+  div id="crop" class="center"
+    
+    h2.light Crop your profile photo
+    = image_tag current_user.avatar(:original), id: "cropbox"
+
+    div#w_original.hidden = current_user.avatar_geometry(:original).width
+
+    = form_for(resource, :as => resource_name, :url => registration_path(resource_name), :method => :put ) do |f|
+      - for attribute in [:crop_x, :crop_y, :crop_w, :crop_h]
+        = f.hidden_field attribute, id: attribute
+        = f.hidden_field :cropped, value: true
+      div
+        = f.submit :Crop!   
+
+/! Dynamic Coffee JS is bad and overloading so... JS trick
+div#labels.hidden = "#{chart_data(:labels) || '["January","February","March","April","May","June"]'}" 
+div#points.hidden = "#{chart_data(:points) || '[236,220,198,194,187,178]'}"
+
+canvas.right.weight-chart width="340" height="180"  
+= link_to "/dashboard/weight", class: "link right" do
+  i.icon-calendar.link-ico
+  | Open weight tracker
+= link_to "#form", class: "form-trigger" do
+  = image_tag current_user.avatar(:small), alt: "User photo", class: "photo #{"placeholder" if current_user.avatar_file_name.nil?}"
+h2.light = "#{current_user.first_name} #{current_user.last_name}"
+= "#{@current_weight} lbs"
+
+div.clearfix
+
+hr
+h2.light Bio
+div#bio = current_user.bio || "You can tell the world your success story here, just write your bio in settings"
