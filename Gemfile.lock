@@ -10,7 +10,7 @@ GIT
 
 GIT
   remote: git://github.com/gregbell/active_admin.git
-  revision: 1b092dfc97fc0c3c61d910927954190f35119cd3
+  revision: aacd7555614d922cfeedb78a19805075a49c1cd7
   branch: rails4
   specs:
     activeadmin (0.6.0)
@@ -175,7 +175,7 @@ GEM
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
     mime-types (1.23)
-    mini_portile (0.5.0)
+    mini_portile (0.5.1)
     minitest (4.7.5)
     multi_json (1.7.7)
     multipart-post (1.2.0)
