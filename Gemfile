@@ -4,7 +4,7 @@ gem 'rails', '4.0.0'
 gem 'mysql2'
 
 gem 'sass-rails'
-gem 'coffee-rails'
+gem 'coffee-rails', group: :assets
 gem 'uglifier'
 gem 'nokogiri' # For YT parsing
 
