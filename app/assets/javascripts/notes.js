@@ -1,3 +1,3 @@
 $('#note-toggle').click(function(){
-  $('#note-form').slideToggle 'fast'
+  $('#note-form').slideToggle('fast')
 })
