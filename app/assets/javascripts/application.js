@@ -11,7 +11,7 @@
 // about supported directives.
 //
 //= require jquery
-//= require jquery_ujss
+//= require jquery_ujs
 // = require jquery.mousewheel
 // = require jquery.stellar
 // = require jquery.fancybox.pack
