@@ -30,8 +30,8 @@
 
 //= require h5bp
 //= require turbolinks
-//= require articles
-//= require users
-//= require dashboard
-//= require weights
-//= require notes
+//= require articles.js
+//= require users.js
+//= require dashboard.js
+//= require weights.js
+//= require notes.js
