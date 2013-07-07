@@ -1,4 +1,8 @@
 #!/bin/sh
+# chkconfig: 2345 95 20
+# description: Unicorn server
+# processname: unicorn.rb
+
 set -e
 
 # Feel free to change any of the following variables for your app:
