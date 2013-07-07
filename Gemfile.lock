@@ -291,7 +291,6 @@ PLATFORMS
 
 DEPENDENCIES
   activeadmin!
-  capistrano
   coffee-rails
   compass-h5bp
   compass-rails!
