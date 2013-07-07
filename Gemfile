@@ -26,7 +26,7 @@ group :doc do
 end
 
 gem 'unicorn'
-#gem 'capistrano', group: :development
+gem 'capistrano', group: :development
 
 gem 'slim-rails'
 gem "paperclip", "~> 3.0"

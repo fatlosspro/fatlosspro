@@ -1,4 +1,4 @@
-require "bundler/capistrano"
+require "rvm/capistrano"
 set :application, "fatlosspro"
 set :repository,  "git@github.com:heidar-ice/#{application}.git"
 
