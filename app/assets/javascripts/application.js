@@ -11,5 +11,27 @@
 // about supported directives.
 //
 //= require jquery
-//= require jquery_ujs
-//= require_tree .
+//= require jquery_ujss
+// = require jquery.mousewheel
+// = require jquery.stellar
+// = require jquery.fancybox.pack
+
+// Not used
+// require jquery.fancybox-buttons
+// require jquery.fancybox-media
+// require jquery.fancybox-thumbs
+
+
+// = require jquery.color
+// = require jquery.Jcrop.min
+// = require Chart.min
+
+// = require tinymce-jquery
+
+// = require h5bp
+// = require turbolinks
+// = require articles.js.coffee
+// = require users.js.coffee
+// = require dashboard.js.coffee
+// = require weights.js.coffee
+// = require notes.js.coffee
