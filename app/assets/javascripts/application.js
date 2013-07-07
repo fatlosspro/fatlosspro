@@ -12,26 +12,4 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require jquery.mousewheel
-//= require jquery.stellar
-//= require jquery.fancybox.pack
-
-// Not used
-// require jquery.fancybox-buttons
-// require jquery.fancybox-media
-// require jquery.fancybox-thumbs
-
-
-//= require jquery.color
-//= require jquery.Jcrop.min
-//= require Chart.min
-
-//= require tinymce-jquery
-
-//= require h5bp
-//= require turbolinks
-//= require articles.js
-//= require users.js
-//= require dashboard.js
-//= require weights.js
-//= require notes.js
+//= require_tree .

@@ -29,12 +29,12 @@ FatLossPro::Application.configure do
   # Do not fallback to assets pipeline if a precompiled asset is missed.
   config.assets.compile = false
   config.assets.precompile += %w[tinymce/tiny_mce.js tinymce/langs/en.js tinymce/themes/advanced/editor_template.js tinymce/plugins/youtube/editor_plugin.js tinymce/plugins/youtube/langs/en.js]
-  config.assets.precompile += %w( *.js index.css )
+  config.assets.precompile += %w( index.css )
   # Generate digests for assets URLs.
   config.assets.digest = true
 
   # Version of your assets, change this if you want to expire all your assets.
-  config.assets.version = '1.1'
+  config.assets.version = '1.2'
 
   # Specifies the header that your server uses for sending files.
   # config.action_dispatch.x_sendfile_header = "X-Sendfile" # for apache
