@@ -29,7 +29,7 @@ FatLossPro::Application.configure do
   # Do not fallback to assets pipeline if a precompiled asset is missed.
   config.assets.compile = false
   config.assets.precompile += %w[tinymce/tiny_mce.js tinymce/langs/en.js tinymce/themes/advanced/editor_template.js tinymce/plugins/youtube/editor_plugin.js tinymce/plugins/youtube/langs/en.js]
-  config.assets.precompile += %w( *.js *.css )
+  config.assets.precompile += %w( *.js index.css )
   # Generate digests for assets URLs.
   config.assets.digest = true
 
