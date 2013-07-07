@@ -34,6 +34,3 @@
 // = require users.js.coffee
 // = require dashboard.js.coffee
 // = require weights.js.coffee
-$('#note-toggle').click(function(){
-  $('#note-form').slideToggle 'fast'
-})
