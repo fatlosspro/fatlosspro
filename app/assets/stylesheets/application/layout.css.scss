@@ -156,12 +156,12 @@ h1, h2, h3, h4, h5, h6 {  // Get rid of damned margins
   color: #ddd;
   
   &:hover {
-    color: $link-hover-color;
+    color: #999;
   }
 
   &:visited {
 
-    &:hover { color: $link-hover-color; }
+    &:hover { color: #999; }
     color: #ddd;
   }
 }
