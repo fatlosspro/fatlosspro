@@ -13,7 +13,7 @@ class ApplicationController < ActionController::Base
   end
 
   def get_static_pages
-    @pages = Page.where(visible: true)
+    @pages = Page.where(visible: true) || []
   end
 
   protected
