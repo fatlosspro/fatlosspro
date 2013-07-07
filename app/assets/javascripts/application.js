@@ -28,10 +28,12 @@
 
 // = require tinymce-jquery
 
+// = require h5bp
+// = require turbolinks
 // = require articles.js.coffee
 // = require users.js.coffee
 // = require dashboard.js.coffee
 // = require weights.js.coffee
-// = require notes.js.coffee
-// = require h5bp
-// = require turbolinks
+$('#note-toggle').click(function(){
+  $('#note-form').slideToggle 'fast'
+})
