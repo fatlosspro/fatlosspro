@@ -27,7 +27,7 @@ class User < ActiveRecord::Base
       setup = {
         :provider => access_token.provider, 
         :url => access_token.info.urls.Facebook, 
-        :email => , 
+        :email => email, 
         :password => Devise.friendly_token[0,20], 
         :first_name => access_token.extra.raw_info.first_name, 
         :last_name => access_token.extra.raw_info.last_name
