@@ -23,10 +23,11 @@ class User < ActiveRecord::Base
     if user = User.where(:url => access_token.info.urls.Facebook).first
       user
     else 
+      email = access_token.extra.raw_info.email.present? ? access_token.extra.raw_info.email : "#{access_token.info.urls.Facebook}@fatlosspro.net"
       setup = {
         :provider => access_token.provider, 
         :url => access_token.info.urls.Facebook, 
-        :email => access_token.extra.raw_info.email, 
+        :email => , 
         :password => Devise.friendly_token[0,20], 
         :first_name => access_token.extra.raw_info.first_name, 
         :last_name => access_token.extra.raw_info.last_name
