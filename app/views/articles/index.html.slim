@@ -24,4 +24,4 @@ div#particles.content data-stellar-background-ratio="0.65"
           p.left = link_to "Continue reading", article_path(article.id), class: 'link'
           p.timestamp = article.created_at.strftime("%m.%d.%Y")
 
-        = will_paginate @notes, class: 'pagination center'
+      = will_paginate @articles, class: 'pagination center'
