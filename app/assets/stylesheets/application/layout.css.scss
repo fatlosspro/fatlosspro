@@ -83,7 +83,9 @@ header {
 }
 
 #particles {
-  background: #000 image-url("pr3.png") no-repeat;
+  background: image-url("pr3.png") no-repeat, image-url("landing.png");
+  background-position: center,center;
+  background-size: cover, cover;
 }
 
 #blur {
@@ -93,7 +95,7 @@ header {
 
 .content {
   min-height: 100%;
-  color: #1a1a1a;
+  color: #000;
 }
 
 .content-area {
@@ -101,11 +103,11 @@ header {
   z-index: 100;
   margin:auto;
   width: 960px;
-  background: #e5e5e5;
+  background: rgba(252,252,252,0.5);
   border-radius: 0 0 15px 15px;
   padding: 40px;
   
-  // Cut angles code 
+/*   // Cut angles code 
   background:
       -moz-linear-gradient(45deg,  transparent 10px, #eaeaea 10px),
       -moz-linear-gradient(135deg, transparent 10px, #eaeaea 10px),
@@ -122,7 +124,7 @@ header {
       -webkit-linear-gradient(225deg, transparent 0px, #eaeaea 0px),
       -webkit-linear-gradient(315deg, transparent 0px, #eaeaea 0px);
   //
-      
+       */
   background: {
     position: bottom left, bottom right, top right, top left;
     size: 50% 50%;
@@ -131,8 +133,8 @@ header {
   -moz-background-size: 50% 50%;
   -webkit-background-size: 50% 50%;
   & .link, & .link:visited {
-    color: #4a4a4a;
-    &:hover { color: #111 }
+    color: #000;
+    &:hover { color: #aaa }
   }
 }
 
