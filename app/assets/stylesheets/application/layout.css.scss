@@ -83,13 +83,12 @@ header {
 }
 
 #particles {
-  background: image-url("pr3.png") no-repeat, image-url("landing.png");
-  background-position: center,center;
-  background-size: cover, cover;
+  background: #000 image-url("landing.png") no-repeat;
+  background-position: center;
 }
 
 #blur {
-  background: transparent image-url("pr_blur.png") no-repeat;
+  //background: transparent image-url("pr_blur.png") no-repeat;
   padding: 0 0 50px 0;
 }
 
@@ -106,25 +105,7 @@ header {
   background: rgba(252,252,252,0.5);
   border-radius: 0 0 15px 15px;
   padding: 40px;
-  
-/*   // Cut angles code 
-  background:
-      -moz-linear-gradient(45deg,  transparent 10px, #eaeaea 10px),
-      -moz-linear-gradient(135deg, transparent 10px, #eaeaea 10px),
-      -moz-linear-gradient(225deg, transparent 0px, #eaeaea 0px),
-      -moz-linear-gradient(315deg, transparent 0px, #eaeaea 0px);
-  background:
-      -o-linear-gradient(45deg,  transparent 10px, #eaeaea 10px),
-      -o-linear-gradient(135deg, transparent 10px, #eaeaea 10px),
-      -o-linear-gradient(225deg, transparent 0px, #eaeaea 0px),
-      -o-linear-gradient(315deg, transparent 0px, #eaeaea 0px);
-  background:
-      -webkit-linear-gradient(45deg,  transparent 10px, #eaeaea 10px),
-      -webkit-linear-gradient(135deg, transparent 10px, #eaeaea 10px),
-      -webkit-linear-gradient(225deg, transparent 0px, #eaeaea 0px),
-      -webkit-linear-gradient(315deg, transparent 0px, #eaeaea 0px);
-  //
-       */
+
   background: {
     position: bottom left, bottom right, top right, top left;
     size: 50% 50%;
