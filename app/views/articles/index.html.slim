@@ -1,8 +1,8 @@
 = title 'Home'
 
 div#particles.content data-stellar-background-ratio="0.65"
-  div#blur.content data-stellar-background-ratio="0.8" 
-    div.content-area
+  div.content-area
+    div.content-inner
       = render 'flashes'
       - @articles.each do |article|
         div.article
