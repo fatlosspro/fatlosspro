@@ -1,8 +1,10 @@
 class User < ActiveRecord::Base
 
   devise :database_authenticatable, :registerable,
-         :recoverable, :rememberable, :trackable, :validatable, :omniauthable
+         :rememberable, :trackable, :validatable, :omniauthable
 
+  # :recoverable - needs mailer
+  
   has_attached_file :avatar, :styles => { :small => "150x150>", :large => "400x400>"}, :default_url => "http://placehold.it/150x150", :processors => [:cropper]
   
   attr_accessor :crop_x, :crop_y, :crop_w, :crop_h

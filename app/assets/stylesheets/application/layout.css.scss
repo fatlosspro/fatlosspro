@@ -28,23 +28,23 @@ header {
   border-bottom: 1px solid #444;
   width: 100%;
   margin: 0 auto;
-  height: 70px;
-
-  & h2 { padding: 15px }
+  height: 130px;
+  padding-top: 15px;
 
   & a, & a:visited, & a:hover { 
     text-decoration:none
   }
-  font-family: 'Titillium Web';
-  font-weight: bold;
+  font-family: 'Danger';
   text-transform: uppercase;
 }
 
 #logo {
 
+  font-size: 37px;
+
   & img {
     border: none; 
-    height: 70px
+    height: 100px
   }
 
   & a, & a:visited, & a:hover { 

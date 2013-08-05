@@ -3,7 +3,7 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .control-block {
-  margin-left: 368px;
+  text-align: center;
 }
 
 .controls {
@@ -13,12 +13,13 @@
 
 .msg {
   display: inline;
-  padding-left: 10px;
-  font-weight: 400
+  position: absolute;
+  padding: 23px 0 0 10px;
+  font-weight: 400;
 }
 
 #submit {
-  padding: 10px 0 0 76px;
+  padding: 10px 0 0 0;
 }
 
 #std-submit {
