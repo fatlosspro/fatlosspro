@@ -3,5 +3,7 @@
 
 @font-face {
 	font-family: Danger;
-	src: url('fonts/GimmeDanger.ttf')
+	src: font-url('GimmeDanger.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal
 } 
